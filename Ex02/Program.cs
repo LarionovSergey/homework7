@@ -5,4 +5,25 @@
 // 8 4 2 4
 // 17 -> такого числа в массиве нет
 
+Console.WriteLine("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+int[,] array2d = { {1, 4, 7, 2}, {5, 9, 2, 3}, {8, 4, 2, 4} };
+int Z = 0;
 
+for (int i = 0; i < 3; i++)
+{
+    for (int j = 0; j < 4; j++)
+    {
+        if (array2d[i,j] == a)
+        {
+            Z++;
+            Console.WriteLine(i + " " + j);
+        }
+    }
+    
+}
+if (Z == 0) Console.WriteLine("Такого числа в массиве нет");
+else
+{
+    Console.WriteLine("Количество таких чисел в массиве: " + Z);
+};
